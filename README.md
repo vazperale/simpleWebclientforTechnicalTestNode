@@ -37,6 +37,8 @@ How to run the project:
 # Comments about the app:
 
 -Simple web client for management of organizations and chargepoints in api
+
 -All in the app.tsx, to try to meet the time limits 
+
 -The intention with more time,will be separate the api endpoints with axios to another file, and try to do components for better legible code 
  
