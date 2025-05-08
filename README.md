@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+How to run the project:
 
-Currently, two official plugins are available:
+1. Clone the repository in a folder:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    ```bash
+    git clone https://github.com/vazperale/simpleWebclientforTechnicalTestNode.git
+    ```
 
-## Expanding the ESLint configuration
+2. Navigate to the project:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    ```bash
+    cd organization-client
+    ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Install the dependencies:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    ```bash
+    npm i
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. Create .env in the root project folder and add the following variable:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    ```bash
+    VITE_API_URL = the url that the api run
+    ```
+
+5. Run the project:
+
+    ```bash
+    npm run dev
+    ```
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# Comments about the app:
+
+-Header with cart that update when you add product to cart in pdp, breadcrumbs for navigate,and name/logo that return to home when you click it.
+
+-PLP with infinite scroll, searchbar for filter with brand , model or both,  and change color when you do hover in product.Click in the product navigate to the pdp product.
+
+-PDP with photo, details/description, selects for color and storage and button for add to the cart.When you add to the cart, an alert shows during 3 seconds to notice you that 
+ the product was added to the cart. if you don´t select color and storage, the button was disabled to avoid errors.
+
+ -Cache system for plp and pdp with 1 hour duration.
+
+ -Added vitest but i didn´t add any test file yet, but if in the future if i add test files, vitest is configured to work correctly.
+ 
